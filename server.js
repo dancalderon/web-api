@@ -2,7 +2,7 @@ import express from "express";
 import hbs from "hbs";
 import fs from "fs"
 const app = express()
-
+const port = process.env.PORT || 3000;
 
 hbs.registerPartials(`${__dirname}/views/partials`) //establishes the partials folder
 app.set('view engine', 'hbs'); //establishes hbs as the view engine
@@ -46,4 +46,7 @@ app.get('/bad', (req, res) => {
   })
 })
 
-app.listen(3000);
+app.listen(port, () => {
+  console.log(`Server is up in port ${port}`)
+}
+);
