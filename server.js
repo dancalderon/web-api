@@ -39,14 +39,13 @@ app.get('/about', (req, res) => {
     pageTitle: 'About page',
   })
 }
-app.get('/projects', (req, res) => {
+)
+app.get('/portfolio', (req, res) => {
   res.render('projects.hbs', {
-    pageTitle: 'Projects page',
+    pageTitle: 'Portfolio page',
   })
 }
 )
-
-
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Website unavaibla'
