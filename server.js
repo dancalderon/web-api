@@ -39,18 +39,21 @@ app.get('/about', (req, res) => {
     pageTitle: 'About page',
   })
 }
-)
-app.get('/portfolio', (req, res) => {
-  res.render('about.hbs', {
-    pageTitle: 'Portfolio page',
+);
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects page',
   })
 }
-)
+);
+
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Website unavaibla'
   })
-})
+});
 
 app.listen(port, () => {
   console.log(`Server is up in port ${port}`)
